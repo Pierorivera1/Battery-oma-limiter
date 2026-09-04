@@ -4,7 +4,7 @@ A unified battery, power profile, and hardware charge-limit widget for [Omarchy]
 
 Cap your laptop's battery charge level directly from your status bar to dramatically extend its lifespan. Rather than adding a redundant second battery icon to your bar, **Battery Oma Limiter** integrates charging thresholds directly into the native Omarchy battery popup—positioned cleanly beneath the **Power Profile** buttons.
 
-![Battery Oma Limiter](preview.png)
+![Battery Oma Limiter](preview-card.png)
 
 ---
 
