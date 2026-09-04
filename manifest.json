@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "battery-oma-limiter",
+  "name": "Battery Oma Limiter",
+  "version": "1.0.0",
+  "author": "Pierorivera1",
+  "description": "Unified battery monitor with power profiles and hardware charge limiting (70% Eco / 80% Balanced / 100% Full)",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Battery Oma Limiter",
+    "description": "Battery status, power profile picker, and hardware charge limit presets",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "schema": [
+      {
+        "key": "showPercentage",
+        "type": "boolean",
+        "label": "Show percentage in bar",
+        "description": "Display the battery percentage next to the icon in the bar",
+        "defaultValue": true
+      }
+    ]
+  }
+}
