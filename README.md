@@ -49,6 +49,27 @@ omarchy restart shell
 
 ---
 
+## 🗑️ Removal / Uninstallation
+
+To disable or remove the plugin:
+
+```bash
+# Disable the plugin
+omarchy plugin disable battery-oma-limiter
+
+# Or remove it completely
+omarchy plugin remove battery-oma-limiter --yes
+```
+
+If you installed the optional passwordless rule and wish to remove it:
+```bash
+sudo rm -f /etc/polkit-1/rules.d/90-omarchy-battery-limit.rules /usr/local/bin/omarchy-battery-limit /etc/tmpfiles.d/battery-limiter.conf
+```
+
+Restore `"omarchy.power"` in your `~/.config/omarchy/shell.json` if desired, then run `omarchy restart shell`.
+
+---
+
 ## ⚡ Optional: Passwordless Mode
 
 Changing kernel sysfs values requires root privileges. By default, clicking a preset uses `pkexec` (standard GUI password prompt).
@@ -60,6 +81,14 @@ To enable instant, one-click switching with **zero password prompts**, run the i
 ```
 
 This installs a Polkit rule in `/etc/polkit-1/rules.d/` authorizing the `wheel` group to update the battery threshold.
+
+---
+
+## 📦 Dependencies
+
+- **None** — No third-party packages or daemons required.
+- Reads standard Linux kernel `sysfs` (`charge_control_end_threshold`).
+- Uses `polkit`/`pkexec` (part of every Omarchy install).
 
 ---
 
